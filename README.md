@@ -12,7 +12,7 @@ Netchi is an autonomous, background-running network reconnaissance tool disguise
 ![Netchi Interface](docs/screenshot1.png) <!-- Replace with your actual screenshot path -->
 *Netchi primary telemetry and logging interface.*
 
-![Netchi Evolution](docs/netchi1.gif) <!-- Replace with your actual gif path -->
+![Netchi Evolution](docs/hatch.gif) <!-- Replace with your actual gif path -->
 *Maturation event.*
 
 --------------------------------------------------------------------
