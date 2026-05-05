@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Questo è vitale: sfondo web totalmente invisibile */
+  background-color: rgba(0, 0, 0, 0) !important;
+  overflow: hidden; /* Niente barre di scorrimento */
+}
+
+/* Container principale del Netchi */
+#pet {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 50px auto; /* Spazio sopra per la vignetta */
+}
+
+.netchi-sprite {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated; 
+  /* background-image: url('/spritesheet.png'); */
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  cursor: grab;
+}
+
+.netchi-sprite:active {
+  cursor: grabbing;
+}
+
+/* La Vignetta "Gameboy Style" */
+.thought-bubble {
+  position: absolute;
+  bottom: 75px; /* Esattamente sopra lo sprite (64px + margine) */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Palette Richiesta */
+  background-color: #e9efec; /* Bianco/Grigio chiaro */
+  color: #555568;            /* Nero/Blu scuro */
+  border: 2px solid #555568;
+  
+  padding: 4px 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1000;
+  
+  /* Ombra solida per profondità retro */
+  box-shadow: 2px 2px 0px #a0a08b;
+}
+
+/* Freccetta della vignetta */
+.thought-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555568 transparent transparent transparent;
+}
+
+/* Interno della freccetta per il bordo */
+.thought-bubble::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -3px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #e9efec transparent transparent transparent;
+  z-index: 1001;
+}
+
+.log-entry {
+  border-left: 3px solid var(--dark);
+  padding-left: 8px;
+  margin-bottom: 6px;
+  color: var(--dark);
+  animation: scanline 0.2s ease-out;
+}
+
+@keyframes scanline {
+  from { opacity: 0; transform: translateX(-5px); }
+  to { opacity: 1; transform: translateX(0); }
+}
