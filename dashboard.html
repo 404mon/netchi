@@ -18,7 +18,7 @@
       border: 4px solid var(--dark); box-sizing: border-box;
     }
     
-    /* Header - Griglia a 3 colonne per allineamento perfetto */
+    /* Header -*/
     .header { 
       border-bottom: 2px solid var(--dark); 
       padding-bottom: 8px; margin-bottom: 15px; 
@@ -28,13 +28,13 @@
       font-size: 0.85rem; font-weight: bold;
       line-height: 1.4;
     }
-    .header > div:nth-child(2) { text-align: center; } /* IP/MASK al centro */
-    .header > div:nth-child(3) { text-align: right; }  /* Location a destra */
+    .header > div:nth-child(2) { text-align: center; } /* IP/MASK centered */
+    .header > div:nth-child(3) { text-align: right; }  /* Location to the right*/
 
     .status-ok { color: #4a7c4a; }
     .location { color: var(--dark); }
 
-    /* Layout a due colonne */
+    /* 2-Columns Layout */
     .main-grid { 
       display: grid; 
       grid-template-columns: 1fr 1fr; 
@@ -49,7 +49,7 @@
       font-weight: bold; text-transform: uppercase;
     }
     
-    /* Colonna Sinistra (Telemetria + Log) */
+    /* Left Col (Telemetry + Log) */
     .left-col { display: flex; flex-direction: column; justify-content: space-between; }
     .telemetry-box { margin-bottom: 10px; }
     .stats-container p { margin: 5px 0; font-size: 0.85rem; }
@@ -62,7 +62,7 @@
 
     .console-wrapper { display: flex; flex-direction: column; flex-grow: 1; justify-content: flex-end; margin-top: 20px;}
     
-    /* Console FIXATA: niente più ritardi visivi */
+    /* FIXED Console */
     .console { 
       background: var(--hover); border: 1px solid var(--accent); 
       padding: 10px; font-size: 0.75rem; color: var(--text);
@@ -74,7 +74,7 @@
       margin-bottom: 5px; font-weight: 600;
     }
 
-    /* Colonna Destra (Archivio Scan) */
+    /* Right Col (scan archive) */
     .right-col { display: flex; flex-direction: column; }
     .scan-list {
       background: var(--bg); border: 1px solid var(--accent);
@@ -149,7 +149,7 @@
       const consoleEl = document.getElementById('console');
       const entry = document.createElement('div');
       entry.className = 'log-entry';
-      if (isError) entry.style.color = '#ff4444'; // Rosso per gli errori
+      if (isError) entry.style.color = '#ff4444'; // Red for errors 
       const time = new Date().toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
       entry.innerText = `[${time}] > ${text}`;
       consoleEl.prepend(entry);
