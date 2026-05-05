@@ -9,10 +9,10 @@ Autonomous AI-Driven Network Reconnaissance & Topology Mapping Node
 
 Netchi is an autonomous, background-running network reconnaissance tool disguised as a desktop virtual pet. Driven by a Reinforcement Learning engine (Q-Table), it passively monitors the local subnet, ingests broadcast packets to calculate network volatility, and autonomously schedules stealth `nmap` scans based on learned environmental states.
 
-![Netchi Interface](docs/screenshot1.png) <!-- Replace with your actual screenshot path -->
+![Netchi Interface](docs/screenshot1.png) 
 *Netchi primary telemetry and logging interface.*
 
-![Netchi Evolution](docs/hatch.gif) <!-- Replace with your actual gif path -->
+![Netchi Evolution](docs/hatch.gif) 
 *Maturation event.*
 
 --------------------------------------------------------------------
@@ -57,7 +57,7 @@ To resolve this, Netchi relies on Linux Capabilities. By assigning `cap_net_raw`
 --------------------------------------------------------------------
 ### Installation
 --------------------------------------------------------------------
-[Baby Crying](docs/baby_crying.gif)
+![Baby Crying](docs/baby_crying.gif)
 *Baby netchi crying, like you when compiling with an i5*
 (*netchi-bin coming soon*)
 
